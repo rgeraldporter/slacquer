@@ -8,15 +8,19 @@ Send and receieve messages from Slack in Node.js!
 
 You can import either via CommonJS or ES6, depending on what you're using.
 
-`var Slacquer = require( 'slacquer' );`
+```javascript
+var Slacquer = require( 'slacquer' );
+```
 
 or 
 
-`import Slacquer from 'slacquer';`
+```javascript
+import Slacquer from 'slacquer';
+```
 
 ## Send
 
-```
+```javascript
     let slack = new Slacquer( 'https://mywebhook.url/192873982173' );
 
     // Slacquer.send is a Promise
@@ -35,7 +39,7 @@ or
 
 ## Respond
 
-```
+```javascript
     let slack = new Slacquer( 'https://mywebhook.url/192873982173' );
 
     slack.respond( req.body )
