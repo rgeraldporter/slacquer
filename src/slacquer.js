@@ -34,6 +34,7 @@ class Slacquer {
         if ( options.attachments )  { message.attachments   = options.attachments   }
         if ( options.unfurlLinks )  { message.unfurl_links  = options.unfurlLinks   }
         if ( options.linkNames )    { message.link_names    = options.linkNames     }
+        if ( options.text )         { message.text          = options.text          }
 
         return this._postToWebhook( JSON.stringify( message ) );
     }

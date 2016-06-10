@@ -72,6 +72,9 @@ var Slacquer = function () {
             if (options.linkNames) {
                 message.link_names = options.linkNames;
             }
+            if (options.text) {
+                message.text = options.text;
+            }
 
             return this._postToWebhook(JSON.stringify(message));
         }
