@@ -120,10 +120,10 @@ var Slacquer = function () {
                 return _bhttp2.default.post(_this.url, body);
             }).then(function (response) {
 
-                console.log(response);
+                return response;
             }).catch(function (err) {
 
-                console.error(err);
+                throw new Error(err);
             });
         }
     }]);

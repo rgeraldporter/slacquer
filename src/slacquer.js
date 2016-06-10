@@ -74,11 +74,11 @@ class Slacquer {
             })
             .then( response => {
 
-                console.log( response );
+                return response;
             })
             .catch( err => {
 
-                console.error( err );
+                throw new Error( err );
             })
         ;
     }

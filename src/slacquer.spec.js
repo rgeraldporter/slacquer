@@ -7,7 +7,7 @@ describe( 'The Slacquer class', () => {
 
     beforeEach( () => {
 
-        slack = new Slacquer( 'https://localhost/' );
+        slack = new Slacquer( 'https://hooks.slack.com/services/my-web-hook' );
 
         spyOn( slack, '_postToWebhook' ).and.callFake( body => {
 
@@ -25,9 +25,9 @@ describe( 'The Slacquer class', () => {
 
         slack.send({
 
-                text: 'This is a test.',
-                channel: '@rgeraldporter',
-                username: 'my-bot'
+                text:           'This is a test.',
+                channel:        '@robporter',
+                username:       'my-bot'
             })
             .then( response => {
 
@@ -42,7 +42,7 @@ describe( 'The Slacquer class', () => {
         slack.send({
 
                 text:       'This is a test.',
-                channel:    '@rgeraldporter',
+                channel:    '@robporter',
                 username:   'my-bot',
                 iconUrl:    'http://example.com/my-cool-icon.png'
             })
@@ -85,7 +85,7 @@ describe( 'The Slacquer class', () => {
 
     beforeEach( () => {
 
-        slack = new Slacquer( 'https://localhost/' );
+        slack = new Slacquer( 'https://hooks.slack.com/services/my-web-hook' );
 
         spyOn( slack, '_postToWebhook' ).and.callFake( body => {
 
@@ -97,9 +97,9 @@ describe( 'The Slacquer class', () => {
 
         slack.send({
 
-                text: 'This is a test.',
-                channel: '@rgeraldporter',
-                username: 'my-bot'
+                text:       'This is a test.',
+                channel:    '@robporter',
+                username:   'my-bot'
             })
             .then( response => {
 
