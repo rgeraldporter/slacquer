@@ -73,10 +73,6 @@ class Slacquer {
 
                 return bhttp.post( this.url, body );
             })
-            .then( response => {
-
-                return response;
-            })
             .catch( err => {
 
                 throw new Error( err );
