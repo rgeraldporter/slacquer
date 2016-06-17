@@ -20,6 +20,27 @@ import Slacquer from 'slacquer';
 
 ## Send
 
+### ES5:
+
+```javascript
+    var slack = new Slacquer( 'https://mywebhook.url/192873982173' );
+
+    // Slacquer.send is a Promise
+    slack.send({
+
+            text:       'This is a test.',
+            channel:    '#testing-bots',
+            username:   'my-cool-bot'
+        })
+        .then( function( response ) {
+
+            // do something with <response.body>
+        })
+    ;
+```
+
+### ES6:
+
 ```javascript
     let slack = new Slacquer( 'https://mywebhook.url/192873982173' );
 
@@ -38,6 +59,21 @@ import Slacquer from 'slacquer';
 ```
 
 ## Respond
+
+### ES5:
+
+```javascript
+    var slack = new Slacquer( 'https://mywebhook.url/192873982173' );
+
+    slack.respond( req.body )
+        .then( function( response ) {
+
+            console.log( response.userName + ' said: "' + response.text + '"' );
+        })
+    ;
+```
+
+### ES6:
 
 ```javascript
     let slack = new Slacquer( 'https://mywebhook.url/192873982173' );
