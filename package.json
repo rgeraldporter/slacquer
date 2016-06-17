@@ -3,7 +3,7 @@
   "author": "Rob Porter",
   "description": "Send and receieve messages from Slack in Node.js.",
   "readmeFilename": "README.md",
-  "version": "0.1.,",
+  "version": "0.1.2",
   "main": "./app/slacquer.js",
   "devDependencies": {
     "babel-cli": "^6.6.5",
