@@ -121,9 +121,6 @@ var Slacquer = function () {
             return _bluebird2.default.try(function () {
 
                 return _bhttp2.default.post(_this.url, body);
-            }).then(function (response) {
-
-                return response;
             }).catch(function (err) {
 
                 throw new Error(err);
